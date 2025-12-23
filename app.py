@@ -99,7 +99,7 @@ def prefun():
     proba = round(r_p*100, 2)
     
     with st.expander("**Predict result**", True):
-        st.info(f"**Model optimal threshold 0.15**")
+        st.info(f"**Model optimal threshold 0.154**")
         st.markdown(f'''
              <div style="text-align: center; font-size: 22px; color: black; margin-bottom: 5px; font-family: Times New Roman; border-bottom: 1px solid black;">
              Based on the entered values, the predicted probability of tigecycline-associated drug-induced liver injury in this patient is {proba}%
@@ -122,7 +122,7 @@ def prefun():
         col = st.columns([1, 6, 1])
         col[1].pyplot(plt.gcf(), use_container_width=True)
         
-        if r_p>0.15:
+        if r_p>0.154:
             st.markdown(f"""<div style="color: black; font-size: 18px; text-align: center; font-weight: bold;">{restext[0]}</div>""", unsafe_allow_html=True)
         else:
             st.markdown(f"""<div style="color: black; font-size: 18px; text-align: center; font-weight: bold;">{restext[1]}</div>""", unsafe_allow_html=True)
